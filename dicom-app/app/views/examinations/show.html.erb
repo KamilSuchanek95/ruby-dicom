@@ -1,29 +1,30 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Study:</strong>
+  <b>Study:</b>
   <%= @examination.study %>
 </p>
 
 <p>
-  <strong>Name:</strong>
+  <b>Name:</b>
   <%= @examination.name %>
 </p>
 
 <p>
-  <strong>Voltage:</strong>
+  <b>Voltage:</b>
   <%= @examination.voltage %>
 </p>
 
 <p>
-  <strong>Current:</strong>
+  <b>Current:</b>
   <%= @examination.current %>
 </p>
 
 <p>
-  <strong>Exposure:</strong>
+  <b>Exposure:</b>
   <%= @examination.exposure %>
 </p>
+
 
 <%= link_to 'Edit', edit_examination_path(@examination) %> |
 <%= link_to 'Back', examinations_path %>

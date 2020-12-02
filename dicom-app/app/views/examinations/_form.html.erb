@@ -1,42 +1,37 @@
-<%= form_with(model: examination, local: true) do |form| %>
-  <% if examination.errors.any? %>
+<%= form_for(@examination) do |f| %>
+  <% if @examination.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(examination.errors.count, "error") %> prohibited this examination from being saved:</h2>
+      <h2><%= pluralize(@examination.errors.count, "error") %> prohibited this examination from being saved:</h2>
 
       <ul>
-        <% examination.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
+      <% @examination.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
       </ul>
     </div>
   <% end %>
 
   <div class="field">
-    <%= form.label :study %>
-    <%= form.text_field :study %>
+    <%= f.label :study %><br />
+    <%= f.text_field :study %>
   </div>
-
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
   </div>
-
   <div class="field">
-    <%= form.label :voltage %>
-    <%= form.text_field :voltage %>
+    <%= f.label :voltage %><br />
+    <%= f.text_field :voltage %>
   </div>
-
   <div class="field">
-    <%= form.label :current %>
-    <%= form.text_field :current %>
+    <%= f.label :current %><br />
+    <%= f.text_field :current %>
   </div>
-
   <div class="field">
-    <%= form.label :exposure %>
-    <%= form.text_field :exposure %>
+    <%= f.label :exposure %><br />
+    <%= f.text_field :exposure %>
   </div>
-
   <div class="actions">
-    <%= form.submit %>
+    <%= f.submit %>
   </div>
 <% end %>

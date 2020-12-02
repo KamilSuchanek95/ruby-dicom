@@ -1,2 +1,2 @@
-class Examination < ApplicationRecord
+class Examination < ActiveRecord::Base
 end
